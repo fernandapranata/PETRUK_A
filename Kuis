@@ -1,0 +1,52 @@
+//
+#include <iostream>
+using namespace std;
+// Macro untuk mencetak bilangan terkecil dari dua digit terakhir pada NPM
+#define bil_terkecil(a,b) ((a) < (b) ? (a) : (b))
+
+int main(){
+    int a, b;
+	cout<<"Masukkan Digit Pertama : ";
+    cin>>a;
+	cout<<endl;
+    cout<<"Masukkan Digit Kedua   : ";
+	cin>>b;
+	cout<<endl;
+	
+    int hasil = bil_terkecil(a, b);
+    cout << "Bilangan Terkecil dari Dua Digit Tersebut Adalah " << hasil;
+    return 0;
+}
+
+
+//
+#include <iostream>
+using namespace std;
+
+int angka(int n) {
+    if (n == 1) {
+        return 6;
+    } else {
+        return 6 * angka(n - 1);
+    }
+}
+
+int main() {
+    int hasil = angka(4);
+    cout << "Hasil perkalian 6 sebanyak 4 kali adalah" << endl << "(6 x 6 x 6 x 6) =  " << hasil << endl;
+    return 0;
+}
+
+
+//
+#include <iostream>
+using namespace std;
+int main() {
+    int npm = 46; 
+    int* pointer = &npm;
+
+    cout << "Nilai Isi Pointer               : " << *pointer << endl;
+    cout << "Alamat Tempat Data NPM Disimpan : " << &npm << endl;
+    
+    return 0;
+}

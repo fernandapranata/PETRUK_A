@@ -1,0 +1,94 @@
+// Buat fungsi dengan nama jarak untuk menghitung jarak antara dua titik (x1,y1) dan (x2,y2).
+// dimana rumus menghitung jarak adalah 
+// D = [( x2 – x1 )2 + (y2 – y1)2] 1/2
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double jarak(double x1, double y1, double x2, double y2){
+double x, y;
+double D, D1, D2;
+double hasil;
+
+x = x2 - x1;
+D1 = pow(x,2);
+y = y2 - y1;
+D2 = pow(y,2);
+
+D = D1 + D2;
+hasil = pow(D, 0.5);
+
+return hasil;
+}
+
+// Buat fungsi void dengan nama findMax tanpa parameter, fungsi membaca input dari keyboard berupa integer N, dan N data.
+// Lalu fungsi akan mencetak nilai terbesar dari data yang diinputkan.
+
+#include <iostream>
+using namespace std;
+
+void findMax(){
+    int n;
+    cin >> n;
+    
+    int max = 0;
+    int temp;
+    
+    for(int i = 0; i < n; i++){
+        cin >> temp;
+        if(temp > max){
+            max = temp;
+        }
+    }
+    cout << max;
+}
+
+// Buat fungsi void dengan nama hitungRerata tanpa parameter, fungsi membaca input dari keyboard berupa integer N, dan N data.
+// Lalu fungsi akan mencetak nilai rata-rata dari data yang diinputkan.
+
+#include <iostream>
+using namespace std;
+
+void hitungRerata(){
+    int n;
+    double rata2=0,data;
+    cin>>n;
+    for (int i=0;i<n;i++) {
+        cin>>data;
+        rata2+= data/n;
+    }
+    cout<<rata2;
+}
+
+// Buat fungsi dengan nama tukar, dengan 3 parameter bilangan bulat a, b, dan c.
+// Fungsi ini akan mengubah nilai tiap parameter dengan cara menukar antara satu dengan lainnya sehingg a < b < c. 
+
+#include <iostream>
+using namespace std;
+
+// fungsi swap digunakan untuk menukarkan dua buah nilai
+void tukar(int &a, int &b, int &c){
+    if(a >= b){
+        swap(a, b);
+    }
+    if(b >= c){
+        swap(b, c);
+    }
+    if(a >= b){
+        swap(a, b);
+    }
+}
+
+// Buat fungsi dengan nama fib yang memiliki 1 parameter integer, fungsi ini untuk menghitung bilangan fibonanci  f(n) = f(n-2) + f(n-1)
+// dimana f(0) = 0, dan f(1) =1
+
+#include <iostream>
+using namespace std;
+
+int fib(int n){
+    if(n <= 1){
+        return n;
+    }
+    return fib(n-2) + fib(n-1);
+}
